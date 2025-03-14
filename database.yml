@@ -1,0 +1,12 @@
+---
+development:
+  dialect: sqlite3
+  database: mtrag_development.sqlite
+  options:
+    mode: rwc # Read, Write, Create
+
+test:
+  url: {{envOr "DATABASE_URL" "postgres://postgres:postgres@postgres:5432/mtrag_test?sslmode=disable"}}
+
+production:
+  url: {{envOr "DATABASE_URL" "postgres://postgres:postgres@127.0.0.1:5432/mtrag_production?sslmode=disable"}}
