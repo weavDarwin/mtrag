@@ -1,3 +1,10 @@
+#mtrag-specific
+AllPrintings.sqlite*
+
+# Nix
+result*
+
+# Buffalo
 vendor/
 **/*.log
 **/*.sqlite
